@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="pl">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Przepis — Blog kulinarny</title>
+  <link rel="stylesheet" href="/styles/variables.css" />
+  <link rel="stylesheet" href="/styles/base.css" />
+  <link rel="stylesheet" href="/styles/topbar.css" />
+  <link rel="stylesheet" href="/home/recipe/style.css" />
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="topbar_inner">
+      <a class="topbar_brand" href="/home/">
+        <span class="topbar_logo" aria-hidden="true"></span>
+        <span class="topbar_title">Blog kulinarny</span>
+      </a>
+      <nav class="topbar_nav">
+        <a class="topbar_link" href="/login/" id="login-link" hidden>Zaloguj</a>
+        <a class="topbar_link" href="/dashboard/" id="panel-link" hidden>Panel administratora</a>
+      </nav>
+    </div>
+  </header>
+  <main id="app">
+    <article class="recipe" id="recipe" hidden>
+      <a class="recipe_back" href="/home/">← Wszystkie przepisy</a>
+      <img class="recipe_image" id="recipe-image" src="" alt="" />
+      <span class="recipe_category" id="recipe-category"></span>
+      <h1 class="recipe_title" id="recipe-title"></h1>
+      <dl class="recipe_facts">
+        <div>
+          <dt>Czas przygotowania</dt>
+          <dd id="recipe-time"></dd>
+        </div>
+        <div>
+          <dt>Porcje</dt>
+          <dd id="recipe-servings"></dd>
+        </div>
+        <div>
+          <dt>Data dodania</dt>
+          <dd id="recipe-date"></dd>
+        </div>
+      </dl>
+      <div class="recipe_columns">
+        <section>
+          <h2>Składniki</h2>
+          <ul id="recipe-ingredients"></ul>
+        </section>
+        <section>
+          <h2>Sposób przygotowania</h2>
+          <ol id="recipe-steps"></ol>
+        </section>
+      </div>
+    </article>
+    <p class="message" id="recipe-message" hidden></p>
+  </main>
+  <script type="module" src="/home/recipe/script/recipe.js"></script>
+</body>
+
+</html>
