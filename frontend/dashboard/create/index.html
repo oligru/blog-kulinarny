@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="pl">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nowy przepis — Blog kulinarny</title>
+  <link rel="stylesheet" href="/styles/variables.css" />
+  <link rel="stylesheet" href="/styles/base.css" />
+  <link rel="stylesheet" href="/styles/topbar.css" />
+  <link rel="stylesheet" href="/styles/forms.css" />
+  <link rel="stylesheet" href="/styles/buttons.css" />
+  <link rel="stylesheet" href="/dashboard/create/style.css" />
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="topbar_inner">
+      <a class="topbar_brand" href="/dashboard/">
+        <span class="topbar_logo" aria-hidden="true"></span>
+        <span class="topbar_title">Blog kulinarny</span>
+      </a>
+      <nav class="topbar_nav">
+        <a class="topbar_link" href="/login/" id="logout">Wyloguj</a>
+      </nav>
+    </div>
+  </header>
+  <main id="app">
+    <h1 class="page-title">Nowy przepis</h1>
+    <form class="form" id="recipe-form">
+      <div class="form_field">
+        <label class="form_label" for="title">Tytuł</label>
+        <input class="form_control" type="text" id="title" name="title" required />
+      </div>
+      <div class="form_field">
+        <span class="form_label">Zdjęcie (JPG/PNG)</span>
+        <div class="upload">
+          <input class="upload_input" type="file" id="image" name="image" accept="image/png, image/jpeg" required />
+          <label class="upload_drop" for="image">
+            <span class="upload_text" id="image-text">Kliknij, aby wybrać plik</span>
+          </label>
+          <img class="upload_preview" id="image-preview" alt="Podgląd zdjęcia" hidden />
+        </div>
+      </div>
+      <div class="form_field">
+        <label class="form_label" for="category">Kategoria</label>
+        <select class="form_control" id="category" name="category" required>
+        </select>
+      </div>
+      <div class="form_field">
+        <label class="form_label" for="cookingTimeMinutes">Czas przygotowania (minuty)</label>
+        <input class="form_control" type="number" id="cookingTimeMinutes" name="cookingTimeMinutes" min="1" required />
+      </div>
+      <div class="form_field">
+        <label class="form_label" for="servings">Liczba porcji</label>
+        <input class="form_control" type="number" id="servings" name="servings" min="1" required />
+      </div>
+      <div class="form_field">
+        <label class="form_label" for="ingredients">Składniki</label>
+        <textarea class="form_control" id="ingredients" name="ingredients" required></textarea>
+        <span class="form_hint">Jeden składnik na linię.</span>
+      </div>
+      <div class="form_field">
+        <label class="form_label" for="steps">Sposób przygotowania</label>
+        <textarea class="form_control" id="steps" name="steps" required></textarea>
+        <span class="form_hint">Jeden krok na linię.</span>
+      </div>
+      <p class="message" id="form-message" hidden></p>
+      <div class="form_actions">
+        <button class="btn btn_primary" type="submit">Zapisz przepis</button>
+        <a class="btn btn_ghost" href="/dashboard/">Anuluj</a>
+      </div>
+    </form>
+  </main>
+  <script type="module" src="/dashboard/create/script/create.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,5 @@
+.form .message {
+  padding: var(--space-sm) 0;
+  text-align: left;
+  color: var(--color-danger-dark);
+}
