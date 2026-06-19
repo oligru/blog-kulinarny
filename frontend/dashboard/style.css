@@ -1,0 +1,12 @@
+.dashboard_head {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-lg);
+}
+
+.dashboard_head .page-title {
+  margin-bottom: 0;
+}
