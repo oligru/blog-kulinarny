@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="pl">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Blog kulinarny</title>
+  <link rel="stylesheet" href="/styles/variables.css" />
+  <link rel="stylesheet" href="/styles/base.css" />
+  <link rel="stylesheet" href="/styles/topbar.css" />
+  <link rel="stylesheet" href="/styles/recipes.css" />
+  <link rel="stylesheet" href="/styles/buttons.css" />
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="topbar_inner">
+      <a class="topbar_brand" href="/home/">
+        <span class="topbar_logo" aria-hidden="true"></span>
+        <span class="topbar_title">Blog kulinarny</span>
+      </a>
+      <nav class="topbar_nav">
+        <a class="topbar_link" href="/login/" id="login-link" hidden>Zaloguj</a>
+        <a class="topbar_link" href="/dashboard/" id="panel-link" hidden>Panel administratora</a>
+      </nav>
+    </div>
+  </header>
+  <main id="app">
+    <h1 class="page-title">Przepisy</h1>
+    <section class="filters">
+      <form class="filters_search-form" id="search-form">
+        <input type="search" id="search" class="filters_search" placeholder="Szukaj po nazwie…" />
+        <button type="submit" class="btn btn_primary">Szukaj</button>
+      </form>
+      <div class="filters_group">
+        <label class="filters_label" for="category">Kategoria</label>
+        <select id="category" class="filters_select">
+        </select>
+      </div>
+      <div class="filters_group">
+        <label class="filters_label" for="sort">Sortuj</label>
+        <select id="sort" class="filters_select">
+          <option value="newest">Najnowsze</option>
+          <option value="oldest">Najstarsze</option>
+        </select>
+      </div>
+    </section>
+    <section id="recipes"></section>
+  </main>
+  <script type="module" src="/home/script/home.js"></script>
+</body>
+
+</html>
