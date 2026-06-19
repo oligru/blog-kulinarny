@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="pl">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Blog kulinarny</title>
+  <link rel="stylesheet" href="/styles/variables.css" />
+  <link rel="stylesheet" href="/styles/base.css" />
+  <link rel="stylesheet" href="/styles/topbar.css" />
+  <style>
+    .error {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: var(--space-md);
+    }
+
+    .error_title {
+      font-size: 1.75rem;
+    }
+
+    .error_link {
+      margin-top: var(--space-sm);
+      padding: var(--space-sm) var(--space-lg);
+      background-color: var(--color-primary-dark);
+      color: #ffffff;
+      font-weight: 600;
+      border-radius: var(--radius-sm);
+    }
+
+    .error_link:hover {
+      filter: brightness(0.92);
+    }
+  </style>
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="topbar_inner">
+      <a class="topbar_brand" href="/home/">
+        <span class="topbar_logo" aria-hidden="true"></span>
+        <span class="topbar_title">Blog kulinarny</span>
+      </a>
+    </div>
+  </header>
+  <main id="app" class="error">
+    <h1 class="error_title">Strona nie znaleziona</h1>
+    <a class="error_link" href="/home/">Wróć do strony głównej</a>
+  </main>
+</body>
+
+</html>
