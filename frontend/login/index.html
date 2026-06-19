@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Logowanie — Blog kulinarny dwóch Oliwii</title>
+    <link rel="stylesheet" href="/styles/variables.css" />
+    <link rel="stylesheet" href="/styles/base.css" />
+    <link rel="stylesheet" href="/styles/topbar.css" />
+    <link rel="stylesheet" href="/styles/forms.css" />
+    <link rel="stylesheet" href="/styles/buttons.css" />
+    <link rel="stylesheet" href="/login/style.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="topbar_inner">
+        <a class="topbar_brand" href="/home/">
+          <span class="topbar_logo" aria-hidden="true"></span>
+          <span class="topbar_title">Blog kulinarny dwóch Oliwii</span>
+        </a>
+      </div>
+    </header>
+    <main id="app">
+      <section class="login">
+        <h1 class="page-title">Logowanie administratora</h1>
+        <form class="form" id="login-form">
+          <div class="form_field">
+            <label class="form_label" for="login">Login</label>
+            <input
+              class="form_control"
+              type="text"
+              id="login"
+              name="login"
+              autocomplete="username"
+              required
+            />
+          </div>
+          <div class="form_field">
+            <label class="form_label" for="password">Hasło</label>
+            <input
+              class="form_control"
+              type="password"
+              id="password"
+              name="password"
+              autocomplete="current-password"
+              required
+            />
+          </div>
+          <p class="message" id="login-message" hidden></p>
+          <div class="form_actions">
+            <button class="btn btn_primary" type="submit">Zaloguj się</button>
+          </div>
+        </form>
+      </section>
+    </main>
+    <script type="module" src="/login/script/login.js"></script>
+  </body>
+</html>
