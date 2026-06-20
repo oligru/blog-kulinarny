@@ -1,4 +1,4 @@
-# Blog kulinarny dwóch Oliwii
+# Blog kulinarny
 ## Autorzy
 - Oliwia Gruchała (frontend)
 - Oliwia Jachym (backend)
