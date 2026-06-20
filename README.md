@@ -11,8 +11,8 @@
 
 ```bash
 cd frontend
-npm install      # raz — instaluje serve do node_modules
-npm run dev      # serwuje katalog frontend/ na http://localhost:3000
+npm install    
+npm run dev      
 ```
 
 ## Uruchomienie (baza danych)
@@ -24,9 +24,9 @@ Wymaga działającej bazy danych (sekcja wyżej).
 
 ```bash
 cd backend
-npm install                 # raz — instaluje zależności
-cp .env.example .env        # uzupełnij JWT_SECRET (i ewentualnie DATABASE_URL)
-npm run dev                 # REST API na http://localhost:3001 
+npm install                 # raz
+cp .env.example .env       
+npm run dev                 
 ```
 
 Konto administratora (login `admin`, hasło `zaq1@WSX`) jest w `backend/db/seed.sql`.
